@@ -62,6 +62,7 @@ nav ul li:hover {
     height: 100vh;
 }
 
+/*****HOME*****/
 #home {
     width: 100%;
     height: 80%;
@@ -81,9 +82,77 @@ nav ul li:hover {
     margin: 30px;
 }
 
+/*****CI SARAI*****/
+#ci_sarai {
+    width: 500px;
+    height: 850px;
+    margin-top: 80px;
+    margin-left: 50px;
+    background-color: var(--color1);
+    border-radius: 20px;
+    color: var(--color4);
+}
+
+#msg {
+    font-size: 26px;
+}
+
+#ci_sarai form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 30px;
+    column-gap: 20px;
+}
+
+.input {
+    margin-top: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    border-width: 0;
+    padding: 8px;
+}
+
+#invio {
+    flex-basis: 100%;
+}
+
+.format {
+    height: 45px;
+    margin-top: 30px;
+}
+
+#invio {
+    text-align: center;
+}
+
+#button {
+    width: 240px;
+    height: 40px;
+    background-color: var(--color4);
+    border-radius: 20px;
+    border-width: 0;
+    color: var(--color1)
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: var(--color1);
+    border: 2px #EAD3C1 solid;
+    color: var(--color4);
+}
+
+#button:active {
+    color: var(--color4);
+    font-size: 14px;
+}
+
+
 
 /*****FOOTER*****/
-
 #footer {
     background-color: var(--color1);
     color: var(--color3);
@@ -96,3 +165,68 @@ nav ul li:hover {
     align-items: center;
     justify-content: center;
 }
+
+/*****SWITCH*****/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 30px;
+    margin-top: 10px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color4);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--color1);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* input:checked + .slider {
+    background-color: var(--color1);
+    border: 2px #EAD3C1 solid;
+  } */
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #7b002c;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 30px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
