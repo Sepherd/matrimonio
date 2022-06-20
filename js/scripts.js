@@ -57,7 +57,7 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button id="button">Invia</button>
+                <button type="submit" id="button">Invia</button>
                 </div>
                 <span> * campi obbligatori.</span>
                 </form>
