@@ -12,7 +12,7 @@ const home = `
 
 const ci_sarai = `
                 <div id="ci_sarai">
-                <form>
+                <form id="form">
                 <h2 id="msg">Per aiutarci ad organizzare, facci sapere in anticipo se ci sarai.</h2>
                 <div id="nome" class="format">
                 <label for="fname" class="etichette">Nome *</label></br>
@@ -23,11 +23,11 @@ const ci_sarai = `
                 <input name="cognome" type="text" maxlength="100" class="input" required>
                 </div>
                 <div id="nome-coppie" class="format">
-                <label for="fname-coppie" class="etichette">Nome (nome partner)</label></br>
+                <label for="fname-coppie" class="etichette">Nome (partner)</label></br>
                 <input name="nome-coppie" type="text" maxlength="100" class="input">
                 </div>
                 <div id="cognome-coppie" class="format">
-                <label for="sname-coppie" class="etichette">Cognome (cognome partner)</label></br>
+                <label for="sname-coppie" class="etichette">Cognome (partner)</label></br>
                 <input name="cognome-coppie" type="text" maxlength="100" class="input">
                 </div>
                 <div id="bambini" class="format">
@@ -39,18 +39,25 @@ const ci_sarai = `
                 <input name="allergie" type="text" maxlength="200" class="input">
                 </div>
                 <div id="notte" class="format">
-                <label for="notte" class="etichette">Ti fermi a dormire?</label></br>
+                <div class="layout">
+                <label for="notte" class="etichette">Ti fermerai a dormire?</label></br>
                 <label class="switch">
                 <input type="checkbox" name="notte" class="format">
                 <span class="slider round"></span>
                 </label>
                 </div>
+                <div class="layout">
+                <label for="notte" class="etichette">Se sì, quanti sarete?</label></br>
+                <input name="notte" type="number" min="0" class="input">
+                </div>
+                </div>
+                <span>Ti aiuteremo a trovare una sistemazione :)</span>
                 <div id="messaggio" class="format">
                 <label for="messaggio" class="etichette">Messaggio</label></br>
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button id="button" action="heymaster6@msn.com">Invia</button>
+                <button id="button">Invia</button>
                 </div>
                 <span> * campi obbligatori.</span>
                 </form>
