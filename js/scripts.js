@@ -81,6 +81,7 @@ $("li").click(function() {
 /*****FORM*****/
 $("form").submit(function(e) {
     e.preventDefault();
+    alert("Grazie! :-)");
 });
 
 /*****PAGE*****/
