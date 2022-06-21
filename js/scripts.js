@@ -79,9 +79,8 @@ $("li").click(function() {
 });
 
 /*****FORM*****/
-$("#form").submit( function(e) {
+$("form").submit( function(e) {
     e.preventDefault();
-     return false;
 });
 
 /*****PAGE*****/
