@@ -78,6 +78,11 @@ $("li").click(function() {
     };
 });
 
+/*****FORM*****/
+$("#form").submit( function(e) {
+    e.preventDefault();
+     return false;
+
 /*****PAGE*****/
 function page(i) {
     switch (i) {
