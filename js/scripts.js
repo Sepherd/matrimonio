@@ -80,11 +80,11 @@ $("li").click(function() {
     };
 });
 
-$("#button").click(function(ev) {
-    ev.preventDefault();
-    $(".container").html("");
-    return false;
-});
+// $("#button").click(function(ev) {
+//     ev.preventDefault();
+//     $(".container").html("");
+//     return false;
+// });
 
 /*****PAGE*****/
 function page(i) {
