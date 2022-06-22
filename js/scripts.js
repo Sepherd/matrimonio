@@ -80,6 +80,12 @@ $("li").click(function() {
     };
 });
 
+$("#button").click(function(ev)
+{
+    ev.preventDefault();
+    $(".container").append(home);
+});
+
 /*****PAGE*****/
 function page(i) {
     switch (i) {
