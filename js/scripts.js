@@ -24,11 +24,11 @@ const ci_sarai = `
                 </div>
                 <div id="nome-coppie" class="format">
                 <label for="fname-coppie" class="etichette">Nome (partner)</label></br>
-                <input name="nome-coppie" type="text" maxlength="100" class="input">
+                <input name="nomepartner" type="text" maxlength="100" class="input">
                 </div>
                 <div id="cognome-coppie" class="format">
                 <label for="sname-coppie" class="etichette">Cognome (partner)</label></br>
-                <input name="cognome-coppie" type="text" maxlength="100" class="input">
+                <input name="cognomepartner" type="text" maxlength="100" class="input">
                 </div>
                 <div id="bambini" class="format">
                 <label for="bambini" class="etichette">Quanti bambini vengono con te? *</label></br>
@@ -79,11 +79,23 @@ $("li").click(function() {
 });
 
 /*****FORM*****/
-$("form").submit(function(e) {
-    e.preventDefault();
-    alert("Grazie! :-\)");
-    return false;
-});
+$(function() {
+    $('form').submit(function() {
+        $.ajax({
+            type: 'POST',
+            url: 'https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati',
+            data: { nome: $(this).nome.value, 
+                    cognome: $(this).cognome.value,
+                    nomePartner: $(this).nomepartner.value,
+                    cognomePartner: $(this).cognomepartner.value,
+                    bambini: $(this).bambini.value,
+                    allergie: $(this).allergie.value,
+                    notte: $(this).notte.value,
+                    messaggio: $(this).messaggio.value }
+        });
+        return false;
+    }); 
+})
 
 /*****PAGE*****/
 function page(i) {
