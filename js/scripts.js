@@ -57,7 +57,7 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button class="pageclip-form__submit" id="button">Invia</button>
+                <a href="www.google.it"><button class="pageclip-form__submit" id="button">Invia</button></a>
                 </div>
                 <span> * campi obbligatori.</span>
                 </form>
