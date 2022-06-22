@@ -78,25 +78,6 @@ $("li").click(function() {
     };
 });
 
-/*****FORM*****/
-$(function() {
-    $('form').submit(function() {
-        $.ajax({
-            type: 'POST',
-            url: 'https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati',
-            data: { nome: $(this).nome.value, 
-                    cognome: $(this).cognome.value,
-                    nomePartner: $(this).nomepartner.value,
-                    cognomePartner: $(this).cognomepartner.value,
-                    bambini: $(this).bambini.value,
-                    allergie: $(this).allergie.value,
-                    notte: $(this).notte.value,
-                    messaggio: $(this).messaggio.value }
-        });
-        return false;
-    }); 
-})
-
 /*****PAGE*****/
 function page(i) {
     switch (i) {
