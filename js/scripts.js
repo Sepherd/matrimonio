@@ -81,7 +81,8 @@ $("li").click(function() {
 /*****FORM*****/
 $("form").submit(function(e) {
     e.preventDefault();
-    alert("Grazie! :-)");
+    alert("Grazie! :-\)");
+    return false;
 });
 
 /*****PAGE*****/
