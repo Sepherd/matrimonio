@@ -80,10 +80,10 @@ $("li").click(function() {
     };
 });
 
-$("#button").click(function(ev)
-{
+$("#button").click(function(ev) {
     ev.preventDefault();
     $(".container").append(home);
+    return false;
 });
 
 /*****PAGE*****/
