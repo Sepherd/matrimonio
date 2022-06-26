@@ -12,7 +12,7 @@ const home = `
 
 const ci_sarai = `
                 <div id="ci_sarai">
-                <form id="form" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post">
+                <form id="form" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB" class="pageclip-form" method="post">
                 <h2 id="msg">Per aiutarci ad organizzare, facci sapere in anticipo se ci sarai.</h2>
                 <div id="nome" class="format">
                 <label for="fname" class="etichette">Nome *</label></br>
@@ -57,7 +57,9 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <input type="submit" value="Send" id="button">
+                <button type="submit" class="pageclip-form__submit" id="button">
+                <span>Invia</span>
+                </button>
                 </div>
                 <span>* campi obbligatori.</span>
                 </form>
@@ -77,12 +79,6 @@ $("li").click(function() {
         page(page_switch);
     };
 });
-
-/**
-<button type="submit" class="pageclip-form__submit" id="button">
-                <span>Invia</span>
-                </button>
-**/
 
 $("#button").click(function(ev) {
             ev.preventDefault();
