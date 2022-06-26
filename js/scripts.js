@@ -57,9 +57,7 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button type="submit" class="pageclip-form__submit" id="button">
-                <span>Invia</span>
-                </button>
+                <input type="submit" value="Send" id="button">
                 </div>
                 <span>* campi obbligatori.</span>
                 </form>
@@ -79,6 +77,12 @@ $("li").click(function() {
         page(page_switch);
     };
 });
+
+/**
+<button type="submit" class="pageclip-form__submit" id="button">
+                <span>Invia</span>
+                </button>
+**/
 
 $("#button").click(function(ev) {
             ev.preventDefault();
