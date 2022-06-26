@@ -80,7 +80,7 @@ $("li").click(function() {
     };
 });
 
-$("#button").click(function(ev) {
+$("#form").submit(function(ev) {
             ev.preventDefault();
             $(".container").html("");
             return false;
