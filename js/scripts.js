@@ -32,7 +32,7 @@ const ci_sarai = `
                 </div>
                 <div id="bambini" class="format">
                 <label for="bambini" class="etichette">Quanti bambini vengono con te?</label></br>
-                <input name="bambini" type="number" min="0" class="input">
+                <input name="bambini" type="number" min="0" class="input" value="0">
                 </div>
                 <div id="allergie" class="format">
                 <label for="allergie" class="etichette">Hai qualche allergia/intolleranza?</label></br>
