@@ -24,15 +24,15 @@ const ci_sarai = `
                 </div>
                 <div id="nome-coppie" class="format">
                 <label for="fname-coppie" class="etichette">Nome (partner)</label></br>
-                <input name="nomepartner" type="text" maxlength="100" class="input">
+                <input name="nome-coppie" type="text" maxlength="100" class="input">
                 </div>
                 <div id="cognome-coppie" class="format">
                 <label for="sname-coppie" class="etichette">Cognome (partner)</label></br>
-                <input name="cognomepartner" type="text" maxlength="100" class="input">
+                <input name="cognome-coppie" type="text" maxlength="100" class="input">
                 </div>
                 <div id="bambini" class="format">
-                <label for="bambini" class="etichette">Quanti bambini vengono con te?</label></br>
-                <input name="bambini" type="number" min="0" class="input" value="0">
+                <label for="bambini" class="etichette">Quanti bambini vengono con te? *</label></br>
+                <input name="bambini" type="number" min="0" class="input" required>
                 </div>
                 <div id="allergie" class="format">
                 <label for="allergie" class="etichette">Hai qualche allergia/intolleranza?</label></br>
@@ -57,11 +57,9 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button type="submit" class="pageclip-form__submit" id="button">
-                <span>Invia</span>
-                </button>
+                <button class="pageclip-form__submit" id="button">Invia</button>
                 </div>
-                <span>* campi obbligatori.</span>
+                <span> * campi obbligatori.</span>
                 </form>
                 </div>
                 `;
@@ -79,18 +77,6 @@ $("li").click(function() {
         page(page_switch);
     };
 });
-
-// $("#form").submit(function(ev) {
-//             ev.preventDefault();
-//             $(".container").html("");
-//             return false;
-});
-
-// function preventDef(ev) {
-//             ev.preventDefault();
-//             $(".container").html("");
-//             return false;
-// };
 
 /*****PAGE*****/
 function page(i) {
@@ -117,6 +103,13 @@ function page(i) {
             console.log("ERROR!");
     }
 }
+
+/*****FORM*****/
+$("#button").click(function(ev)
+{
+    ev.preventDefault();
+    $(".container").append(home);
+});
 
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
