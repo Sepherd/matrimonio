@@ -57,7 +57,7 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button class="pageclip-form__submit" id="button">Invia</button>
+                <button class="pageclip-form__submit" id="button" onclick="noRedirect(event)">Invia</button>
                 </div>
                 <span> * campi obbligatori.</span>
                 </form>
@@ -105,11 +105,10 @@ function page(i) {
 }
 
 /*****FORM*****/
-$("#button").click(function(ev)
-{
+function noRedirect(ev) {
     ev.preventDefault();
-    $(".container").append(home);
-});
+    $(".container").html("");
+}
 
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
