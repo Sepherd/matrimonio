@@ -57,7 +57,7 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button type="submit" class="pageclip-form__submit" id="button">
+                <button type="submit" class="pageclip-form__submit" id="button" onclick="preventDef(e)">
                 <span>Invia</span>
                 </button>
                 </div>
@@ -80,11 +80,17 @@ $("li").click(function() {
     };
 });
 
-$("#form").submit(function(ev) {
+// $("#form").submit(function(ev) {
+//             ev.preventDefault();
+//             $(".container").html("");
+//             return false;
+});
+
+function preventDef(ev) {
             ev.preventDefault();
             $(".container").html("");
             return false;
-});
+};
 
 /*****PAGE*****/
 function page(i) {
