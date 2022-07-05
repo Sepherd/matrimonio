@@ -57,7 +57,7 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button type="submit" class="pageclip-form__submit" id="button" onclick="preventDef(e)">
+                <button type="submit" class="pageclip-form__submit" id="button">
                 <span>Invia</span>
                 </button>
                 </div>
@@ -86,11 +86,11 @@ $("li").click(function() {
 //             return false;
 });
 
-function preventDef(ev) {
-            ev.preventDefault();
-            $(".container").html("");
-            return false;
-};
+// function preventDef(ev) {
+//             ev.preventDefault();
+//             $(".container").html("");
+//             return false;
+// };
 
 /*****PAGE*****/
 function page(i) {
@@ -119,7 +119,7 @@ function page(i) {
 }
 
 /*****COUNTDOWN*****/
-let marriageDate = new Date("Oct 8, 2022 11:00:00").getTime();
+let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
 let countdown = setInterval(function() {
     let now = new Date().getTime();
     let distance = marriageDate - now;
