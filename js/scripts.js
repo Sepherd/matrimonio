@@ -137,13 +137,6 @@ function page(i) {
     }
 }
 
-/*****FORM*****/
-$("#button").click(function(ev)
-{
-    ev.preventDefault();
-    $(".container").append(home);
-});
-
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
 let countdown = setInterval(function() {
