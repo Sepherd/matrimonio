@@ -178,7 +178,9 @@ input[name="messaggio"] {
     font-size: 14px;
 }
 
-
+#lol {
+    display: hidden;
+}
 
 /*****FOOTER*****/
 #footer {
