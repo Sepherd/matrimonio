@@ -35,7 +35,7 @@ const come_arrivare = `
 
 const ci_sarai = `
                 <div id="ci_sarai">
-                <form id="form" target="fake_page" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post">
+                <form id="form" target="fake_page" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post" onsubmit="return message(this);">
                 <h2 id="msg">Per aiutarci ad organizzare, facci sapere in anticipo se ci sarai.</h2>
                 <div id="nome" class="format">
                 <label for="fname" class="etichette">Nome *</label></br>
@@ -88,6 +88,12 @@ const ci_sarai = `
                 </div>
                 `;
 
+const thanks = `
+            <div id="thanks">
+            <p>grazie!</p>
+            </div>
+`;
+
 const lista_nozze = `
                 <div id="lista_nozze">
                 <h2>Grazie</h2>
@@ -138,10 +144,11 @@ function page(i) {
 }
 
 /*****FORM*****/
-$("#button").click(function(ev)
-{
+function message(form) {
     $(".container").html("");
-});
+    $(".container").append(thanks);
+    return false;
+}
 
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
