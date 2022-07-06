@@ -35,7 +35,7 @@ const come_arrivare = `
 
 const ci_sarai = `
                 <div id="ci_sarai">
-                <form id="form" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post">
+                <form id="form" target="redirect" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post">
                 <h2 id="msg">Per aiutarci ad organizzare, facci sapere in anticipo se ci sarai.</h2>
                 <div id="nome" class="format">
                 <label for="fname" class="etichette">Nome *</label></br>
@@ -82,6 +82,7 @@ const ci_sarai = `
                 <div id="invio" class="format">
                 <button class="pageclip-form__submit" id="button">Invia</button>
                 </div>
+                <iframe id="redirect"></iframe>
                 <span> * campi obbligatori.</span>
                 </form>
                 </div>
