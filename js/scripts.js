@@ -82,7 +82,7 @@ const ci_sarai = `
                 <div id="invio" class="format">
                 <button class="pageclip-form__submit" id="button">Invia</button>
                 </div>
-                <iframe id="redirect"></iframe>
+                <iframe name="redirect"></iframe>
                 <span> * campi obbligatori.</span>
                 </form>
                 </div>
