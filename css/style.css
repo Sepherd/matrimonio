@@ -179,7 +179,11 @@ input[name="messaggio"] {
 }
 
 #lol {
-    display: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0;
+    z-index: -10;
 }
 
 /*****FOOTER*****/
