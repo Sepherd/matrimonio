@@ -10,6 +10,29 @@ const home = `
             </div>
             `;
 
+const come_arrivare = `
+                    <div id="come_arrivare">
+                    <h2>Sabato 8 Ottobre</h2>
+                    <div class="cerimonia">
+                    <div class="event">
+                    <p>La Cerimonia si svolgerà presso il Comune di Ceprano a partire dalle ore 11:30</p>
+                    </div>
+                    <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764429.3835028849!2d12.954975703866097!3d41.54646527924996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13254cddc429f46b%3A0xc5e167f56d34ee5e!2sComune%20Di%20Ceprano!5e0!3m2!1sit!2sit!4v1657101167202!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    </div>
+                    <div class="cerimonia">
+                    <div class="event">
+                    <p>Il Ricevimento avrà luogo, a seguire, presso Villa Ferrari - Ceprano</p>
+                    </div>
+                    <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764303.1050132293!2d12.93557840386645!3d41.55714477924902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13254c5595786839%3A0x5acdfcb4be4daa25!2sVilla%20Ferrari!5e0!3m2!1sit!2sit!4v1657102156225!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    </div>
+                    </div>
+
+`;
+
 const ci_sarai = `
                 <div id="ci_sarai">
                 <form id="form" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post">
@@ -31,8 +54,8 @@ const ci_sarai = `
                 <input name="cognome-coppie" type="text" maxlength="100" class="input">
                 </div>
                 <div id="bambini" class="format">
-                <label for="bambini" class="etichette">Quanti bambini vengono con te? *</label></br>
-                <input name="bambini" type="number" min="0" class="input" required>
+                <label for="bambini" class="etichette">Quanti bambini vengono con te?</label></br>
+                <input name="bambini" type="number" min="0" value="0" class="input">
                 </div>
                 <div id="allergie" class="format">
                 <label for="allergie" class="etichette">Hai qualche allergia/intolleranza?</label></br>
@@ -57,12 +80,21 @@ const ci_sarai = `
                 <input name="messaggio" type="text" maxlength="500" class="input">
                 </div>
                 <div id="invio" class="format">
-                <button class="pageclip-form__submit" id="button" onclick="noRedirect(event)">Invia</button>
+                <button class="pageclip-form__submit" id="button">Invia</button>
                 </div>
                 <span> * campi obbligatori.</span>
                 </form>
                 </div>
                 `;
+
+const lista_nozze = `
+                <div id="lista_nozze">
+                <h2>Grazie</h2>
+                <p>a chi vorrà contribuire a realizzare tutti i nostri progetti</p>
+                <p>IBAN: IT96L020080520400421371651</p>
+                <p>Intestato a Moro Riccardo e Palleschi Maria Paola</p>
+                </div>
+`; 
 
 
 /*****NAV*****/
@@ -85,7 +117,7 @@ function page(i) {
             $(".container").append(home);
             break;
         case 2:
-            console.log("In costruzione");
+            $(".container").append(come_arrivare);
             break;
         case 3:
             $(".container").append(ci_sarai);
@@ -94,7 +126,7 @@ function page(i) {
             console.log("In costruzione");
             break;
         case 5:
-            console.log("In costruzione");
+            $(".container").append(lista_nozze);
             break;
         case 6:
             console.log("In costruzione");
@@ -105,10 +137,11 @@ function page(i) {
 }
 
 /*****FORM*****/
-function noRedirect(ev) {
+$("#button").click(function(ev)
+{
     ev.preventDefault();
-    $(".container").html("");
-}
+    $(".container").append(home);
+});
 
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
