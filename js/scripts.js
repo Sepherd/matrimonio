@@ -35,7 +35,7 @@ const come_arrivare = `
 
 const ci_sarai = `
                 <div id="ci_sarai">
-                <form id="form" target="redirect" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post">
+                <form id="form" target="fake_page" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post">
                 <h2 id="msg">Per aiutarci ad organizzare, facci sapere in anticipo se ci sarai.</h2>
                 <div id="nome" class="format">
                 <label for="fname" class="etichette">Nome *</label></br>
@@ -82,7 +82,7 @@ const ci_sarai = `
                 <div id="invio" class="format">
                 <button class="pageclip-form__submit" id="button">Invia</button>
                 </div>
-                <iframe name="redirect" id="lol"></iframe>
+                <iframe name="fake_page" id="redirect"></iframe>
                 <span> * campi obbligatori.</span>
                 </form>
                 </div>
@@ -136,6 +136,13 @@ function page(i) {
             console.log("ERROR!");
     }
 }
+
+/*****FORM*****/
+$("#button").click(function(ev)
+{
+    ev.preventDefault();
+    $(".container").append(home);
+});
 
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
