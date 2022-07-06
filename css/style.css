@@ -26,7 +26,7 @@ body {
 
 nav {
     width: 100%;
-    height: 10vh;
+    height: 100px;
     background-color: var(--color1);
 }
 
@@ -184,6 +184,20 @@ input[name="messaggio"] {
     border: none;
     width: 0;
     height: 0;
+}
+
+#thanks {
+    width: 100%;
+    height: calc(100% - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#thanks p{
+    font-family: "The Nautigal", cursive;
+    font-size: 140px;
+    color: var(--color1);
 }
 
 /*****FOOTER*****/

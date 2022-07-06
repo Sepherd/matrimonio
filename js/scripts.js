@@ -90,7 +90,7 @@ const ci_sarai = `
 
 const thanks = `
             <div id="thanks">
-            <p>grazie!</p>
+            <p>Grazie!</p>
             </div>
 `;
 
