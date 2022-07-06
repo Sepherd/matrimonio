@@ -143,12 +143,12 @@ function page(i) {
     }
 }
 
-/*****FORM*****/
-function message(form) {
-    $(".container").html("");
-    $(".container").append(thanks);
-    return false;
-}
+// /*****FORM*****/
+// function message(form) {
+//     $(".container").html("");
+//     $(".container").append(thanks);
+//     return false;
+// }
 
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
