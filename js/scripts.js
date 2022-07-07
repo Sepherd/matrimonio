@@ -144,11 +144,10 @@ function page(i) {
 }
 
 /*****FORM*****/
-function message(form) {
+function wait(form) {
     setTimeout(function () {
-        $(".container").html("");
-        $(".container").append(thanks);
-    }, 1000);
+        
+    }, 2000);
 }
 
 /*****COUNTDOWN*****/
