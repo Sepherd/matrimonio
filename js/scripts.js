@@ -146,10 +146,10 @@ function page(i) {
 /*****FORM*****/
 function message(form) {
     setTimeout(function () {
-        // $(".container").html("");
-        // $(".container").append(thanks);
-        alert("Dati inviati.\nGrazie!");
-    }, 1000);
+        $(".container").html("");
+        $(".container").append(thanks);
+//         alert("Dati inviati.\nGrazie!");
+    }, 2000);
 }
 
 /*****COUNTDOWN*****/
