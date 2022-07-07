@@ -148,8 +148,7 @@ function message(form) {
     setTimeout(function () {
         $(".container").html("");
         $(".container").append(thanks);
-//         alert("Dati inviati.\nGrazie!");
-    }, 2000);
+    }, 3000);
 }
 
 /*****COUNTDOWN*****/
