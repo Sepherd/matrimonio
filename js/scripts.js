@@ -35,7 +35,7 @@ const come_arrivare = `
 
 const ci_sarai = `
                 <div id="ci_sarai">
-                <form id="form" target="fake_page" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post" onsubmit="wait()">
+                <form id="form" target="fake_page" action="https://send.pageclip.co/ooqcLKV3xKOZTQzgvQxJ6aZJjKzJyPnB/invitati" class="pageclip-form" method="post" onsubmit="message(this)">
                 <h2 id="msg">Per aiutarci ad organizzare, facci sapere in anticipo se ci sarai.</h2>
                 <div id="nome" class="format">
                 <label for="fname" class="etichette">Nome *</label></br>
@@ -144,15 +144,12 @@ function page(i) {
 }
 
 /*****FORM*****/
-function wait() {
+function message(form) {
     setTimeout(function () {
-        message();
-    }, 2000);
-}
-
-function message() {
-            $(".container").html("");
-            $(".container").append(thanks);
+        // $(".container").html("");
+        // $(".container").append(thanks);
+        alert("Dati inviati.\nGrazie!");
+    }, 1000);
 }
 
 /*****COUNTDOWN*****/
