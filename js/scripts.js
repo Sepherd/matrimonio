@@ -157,12 +157,12 @@ function disableNum() {
     }
 };
 
-// function message(form) {
-//     setTimeout(function () {
-//         $(".container").html("");
-//         $(".container").append(thanks);
-//     }, 3000);
-// }
+function message(form) {
+    setTimeout(function () {
+        $(".container").html("");
+        $(".container").append(thanks);
+    }, 3000);
+}
 
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
