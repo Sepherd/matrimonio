@@ -1,5 +1,6 @@
 /*****VAR*****/
 let page_switch = 1;
+let disableSwitch = 0;
 
 const home = `
             <div id="home">
@@ -65,13 +66,13 @@ const ci_sarai = `
                 <div class="layout">
                 <label for="notte" class="etichette">Ti fermerai a dormire?</label></br>
                 <label class="switch">
-                <input type="checkbox" name="notte" class="format">
+                <input type="checkbox" name="notte" id="check" class="format" onclick="disableNum()">
                 <span class="slider round"></span>
                 </label>
                 </div>
                 <div class="layout">
                 <label for="notte" class="etichette">Se sì, quanti sarete?</label></br>
-                <input name="notte" type="number" min="0" class="input">
+                <input name="notte" type="number" min="0" id="nb_night" class="input" value="0" disabled>
                 </div>
                 </div>
                 <span>Ti aiuteremo a trovare una sistemazione :)</span>
@@ -144,12 +145,24 @@ function page(i) {
 }
 
 /*****FORM*****/
-function message(form) {
-    setTimeout(function () {
-        $(".container").html("");
-        $(".container").append(thanks);
-    }, 3000);
-}
+function disableNum() {
+    if (disableSwitch == 0) {
+        $("#nb_night").prop("disabled", false);
+        disableSwitch = 1;
+    }
+    else {
+        $("#nb_night").prop("disabled", true);
+        $("#nb_night").val("0");
+        disableSwitch = 0;
+    }
+};
+
+// function message(form) {
+//     setTimeout(function () {
+//         $(".container").html("");
+//         $(".container").append(thanks);
+//     }, 3000);
+// }
 
 /*****COUNTDOWN*****/
 let marriageDate = new Date("Oct 8, 2022 11:30:00").getTime();
