@@ -95,6 +95,10 @@ const thanks = `
             </div>
 `;
 
+const spinner = `
+            <div class="lds-heart"><div></div></div>
+`;
+
 const lista_nozze = `
                 <div id="lista_nozze">
                 <h2>Grazie</h2>
@@ -158,6 +162,8 @@ function disableNum() {
 };
 
 function message(form) {
+    $("#invio").html("");
+    $("#invio").append(spinner);
     setTimeout(function () {
         $(".container").html("");
         $(".container").append(thanks);
