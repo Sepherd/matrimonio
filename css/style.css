@@ -18,6 +18,7 @@
 body {
     background-color: var(--color4);
     height: 100vh;
+    max-height: 100vh;
     color: var(--color3);
 }
 
@@ -28,6 +29,37 @@ nav {
     width: 100%;
     height: 100px;
     background-color: var(--color1);
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#img_bg {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: var(--color4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sposi_img {
+    height: 40px;
+}
+
+#nomi p {
+    font-family: "The Nautigal", cursive;
+    font-size: 20px;
+    color: var(--color4);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 48;
 }
 
 nav ul {
@@ -62,7 +94,9 @@ nav ul li:hover {
     height: 100vh;
 }
 
+
 /*****HOME*****/
+
 #home {
     width: 100%;
     height: 80%;
@@ -82,7 +116,9 @@ nav ul li:hover {
     margin: 30px;
 }
 
+
 /*****CI SARAI*****/
+
 #ci_sarai {
     width: 500px;
     height: 850px;
@@ -194,13 +230,15 @@ input[name="messaggio"] {
     justify-content: center;
 }
 
-#thanks p{
+#thanks p {
     font-family: "The Nautigal", cursive;
     font-size: 140px;
     color: var(--color1);
 }
 
+
 /*****FOOTER*****/
+
 #footer {
     background-color: var(--color1);
     color: var(--color3);
@@ -214,24 +252,30 @@ input[name="messaggio"] {
     justify-content: center;
 }
 
+
 /*****SWITCH*****/
+
 .switch {
     position: relative;
     display: inline-block;
     width: 52px;
     height: 30px;
     margin-top: 10px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  /* The slider */
-  .slider {
+}
+
+
+/* The slider */
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -241,9 +285,9 @@ input[name="messaggio"] {
     background-color: grey;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 24px;
@@ -253,43 +297,47 @@ input[name="messaggio"] {
     background-color: var(--color3);
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: #bada55;
     /* border: 2px #EAD3C1 solid; */
-  }
-  
-  input:focus + .slider {
+}
+
+input:focus+.slider {
     box-shadow: 0 0 1px #7b002c;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     -webkit-transform: translateX(20px);
     -ms-transform: translateX(20px);
     transform: translateX(20px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
     border-radius: 30px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}
 
-  /*****SPINNER*****/
 
-  .lds-heart {
+/*****SPINNER*****/
+
+.lds-heart {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
     transform: rotate(45deg);
     transform-origin: 40px 40px;
-  }
-  .lds-heart div {
+}
+
+.lds-heart div {
     top: 32px;
     left: 32px;
     position: absolute;
@@ -297,42 +345,45 @@ input[name="messaggio"] {
     height: 32px;
     background: var(--color4);
     animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  .lds-heart div:after,
-  .lds-heart div:before {
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
     content: " ";
     position: absolute;
     display: block;
     width: 32px;
     height: 32px;
     background: var(--color4);
-  }
-  .lds-heart div:before {
+}
+
+.lds-heart div:before {
     left: -24px;
     border-radius: 50% 0 0 50%;
-  }
-  .lds-heart div:after {
+}
+
+.lds-heart div:after {
     top: -24px;
     border-radius: 50% 50% 0 0;
-  }
-  @keyframes lds-heart {
+}
+
+@keyframes lds-heart {
     0% {
-      transform: scale(0.95);
+        transform: scale(0.95);
     }
     5% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
     39% {
-      transform: scale(0.85);
+        transform: scale(0.85);
     }
     45% {
-      transform: scale(1);
+        transform: scale(1);
     }
     60% {
-      transform: scale(0.95);
+        transform: scale(0.95);
     }
     100% {
-      transform: scale(0.9);
+        transform: scale(0.9);
     }
-  }
-  
+}
